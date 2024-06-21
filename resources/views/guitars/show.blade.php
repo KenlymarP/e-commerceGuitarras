@@ -1,25 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Guitars</title>
-</head>
-
-<body>
-
-  <div>
-    <img src="{{ asset('storage/imagenes/' . $guitarrad->imagen . '.jpg') }}" alt="" width="300" height="200">
-    <p><b>Nombre:</b>{{$guitarrad->nombre}}</p>
-    <p><b>Precio</b>{{$guitarrad->precio}}<span>&dollar;</span></p>
-    <p><b>Marca</b>{{$guitarrad->marca}}</p>
-    <p><b>Modelo:</b>{{$guitarrad->modelo}}</p>
-    <p><b>Tipo:</b>{{$guitarrad->tipo}}</p>
-    <p><b>Color</b>{{$guitarrad->color}}</p>
-    <p><b>stock:</b>{{$guitarrad->stock}}</p>
-  </div>
-
-</body>
-
-</html>
+<x-header>
+  <div class='container'>
+    <h1 class="text-center mb-5">{{$guitarrad->nombre}}</h1>
+    <div class="row shadow-lg p-3 mb-5 bg-body-tertiary rounded">
+      <div class="col-md-6 ">
+        <img src="{{ asset('storage/imagenes/' . $guitarrad->imagen . '.jpg') }}" alt="" class="img-fluid">
+      </div>
+      <div class="col-md-4">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item"><b>Nombre:</b> {{$guitarrad->marca}}</li>
+          <li class="list-group-item"><b>Marca:</b> {{$guitarrad->marca}}</li>
+          <li class="list-group-item"><b>Modelo:</b> {{$guitarrad->modelo}}</li>
+          <li class="list-group-item"><b>Precio:</b> {{$guitarrad->precio}}$</li>
+          <li class="list-group-item"><b>Tipo:</b> {{$nombreCategoria}}</li>
+          <li class="list-group-item"><b>Color:</b> {{$nombreCategoria}}</li>
+          <li class="list-group-item"><b>Stock:</b> {{$guitarrad->stock}}</li>
+        </ul>
+        <div class="d-flex justify-content-center">
+          <button class="btn btn-primary agregar bi bi-cart-plus-fill " data-id="{{$guitarrad->id}}"> Agregar al
+            Carrito</button>
+        </div>
+      </div>
+    </div>
+</x-header>

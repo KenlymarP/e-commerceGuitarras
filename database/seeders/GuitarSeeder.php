@@ -13,12 +13,12 @@ class GuitarSeeder extends Seeder
      */
     public function run(): void
     {
-        //
+        
         DB::table('guitars')->insert([
             'nombre' => 'Morris WJ25 JAPAN 80s',
             'marca' => 'Morris',
             'modelo' => 'WJ25 JAPAN 80s',
-            'tipo' => 'Acústica',
+            'categories_id' => '1',
             'color' => 'Amarillo claro',
             'imagen' => 'guitarraM',
             'stock' => '5',
@@ -29,7 +29,7 @@ class GuitarSeeder extends Seeder
             'nombre' => 'Gibson 1941 SJ-100 USA 2013',
             'marca' => 'Gibson',
             'modelo' => 'SJ-100 USA 2013',
-            'tipo' => 'acústica',
+            'categories_id' => '1',
             'color' => 'Vintage Sunburst',
             'imagen' => 'guitarraG',
             'stock' => '5',
@@ -40,7 +40,7 @@ class GuitarSeeder extends Seeder
             'nombre' => 'The Loar LH-302T CCb 2019',
             'marca' => 'The Loar',
             'modelo' => 'LH-302T CCb 2019',
-            'tipo' => 'Eléctrica',
+            'categories_id' => '2',
             'color' => 'Cherry Burst',
             'imagen' => 'guitarraT',
             'stock' => '7',
@@ -51,7 +51,7 @@ class GuitarSeeder extends Seeder
             'nombre' => 'Yamaha EZ AG SELF teaching guitar red',
             'marca' => 'Yamaha',
             'modelo' => 'EZ AG',
-            'tipo' => 'Eléctrica',
+            'categories_id' => '2',
             'color' => 'Rojo',
             'imagen' => 'guitarraY',
             'stock' => '8',
@@ -62,7 +62,7 @@ class GuitarSeeder extends Seeder
             'nombre' => 'Alhambra 5p',
             'marca' => 'Alhambra',
             'modelo' => '5p',
-            'tipo' => 'Clásica',
+            'categories_id' => '3',
             'color' => 'Natural acabado brillo',
             'imagen' => 'guitarraA',
             'stock' => '2',
@@ -73,7 +73,7 @@ class GuitarSeeder extends Seeder
             'nombre' => 'Jose Gomez Clásica 205',
             'marca' => 'Jose Gomez',
             'modelo' => 'Clásica 205',
-            'tipo' => 'Clásica',
+            'categories_id' => '3',
             'color' => 'Caoba',
             'imagen' => 'guitarraJ',
             'stock' => '10',
